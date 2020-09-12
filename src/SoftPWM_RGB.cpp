@@ -24,6 +24,10 @@ void RGB::SetFadeTime(int delaytime_1,int delaytime_2){
   SoftPWMSetFadeTime(ALL,delaytime_1,delaytime_2);
 }
 
+void RGB::ResetFadeTime(){
+  SoftPWMSetFadeTime(ALL,0,0);
+}
+
 void RGB::Fade(int delaytime){
   SoftPWMSetFadeTime(ALL,delaytime,delaytime);
   RGB_LED(255,0,0,delaytime);

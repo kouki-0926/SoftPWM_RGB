@@ -10,6 +10,23 @@ void setup(){
   rgb.init();
 }
 
+int delaytime=500;
 void loop(){
+  rgb.RGB_LED(64,0,64,100);
+
+  int num=3;
+  while(num--){
+    rgb.SetFadeTime(delaytime,delaytime);
+    rgb.on(delaytime);
+    rgb.off(delaytime);
+  }
+  
+  num=3;
+  while(num--){
+    rgb.ResetFadeTime();
+    rgb.on(delaytime);
+    rgb.off(delaytime);
+  }
+
   rgb.Fade(1000);
 }
