@@ -1,0 +1,21 @@
+#######################################
+# Syntax Coloring Map For SoftPWM_RGB
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SoftPWM_RGB	KEYWORD1	SoftPWM_RGB
+RGB	KEYWORD1	RGB
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init	KEYWORD2
+RGB_LED	KEYWORD2
+SetFadeTime	KEYWORD2
+Fade	KEYWORD2
+on	KEYWORD2
+off	KEYWORD2
