@@ -1,3 +1,9 @@
+/** **************************************
+ * @file   SoftPWM_RGB.hpp
+ * @brief  SoftPWM_RGBライブラリのヘッダファイル
+ * @author https://github.com/kouki-0926
+ ************************************** **/
+
 #ifndef SOFTPWM_RGB_HPP_
 #define SOFTPWM_RGB_HPP_
 

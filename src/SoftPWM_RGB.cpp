@@ -1,7 +1,7 @@
 /** **************************************
  * @file   SoftPWM_RGB.cpp
  * @brief  SoftPWM_RGBライブラリの実装ファイル
- * @author  https://github.com/kouki-0926
+ * @author https://github.com/kouki-0926
  ************************************** **/
 
 #include "SoftPWM_RGB.hpp"
