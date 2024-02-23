@@ -1,32 +1,44 @@
-#include <SoftPWM_RGB.h>
+/** **************************************
+ * @example example_1.ino
+ * @brief   SoftPWM_RGBライブラリの使用例
+ * @author  https://github.com/kouki-0926
+ ************************************** **/
 
-const int redpin=13;
-const int greenpin=12;
-const int bluepin=11;
+#include <SoftPWM_RGB.hpp>
 
-RGB rgb(redpin,greenpin,bluepin);
+const int redPin = 11;
+const int greenPin = 12;
+const int bluePin = 13;
 
-void setup(){
-  rgb.init();
-}
+RGB rgb(redPin, greenPin, bluePin);
 
-int delaytime=500;
-void loop(){
-  rgb.RGB_LED(64,0,64,100);
+void setup() { rgb.init(); }
 
-  int num=3;
-  while(num--){
-    rgb.SetFadeTime(delaytime,delaytime);
-    rgb.on(delaytime);
-    rgb.off(delaytime);
-  }
-  
-  num=3;
-  while(num--){
-    rgb.ResetFadeTime();
-    rgb.on(delaytime);
-    rgb.off(delaytime);
-  }
+const int delayTime = 250;
+void loop() {
+    for (int i = 0; i < 255; i++) {
+        rgb.RGB_LED(i, 255 - i, 0, 10);
+    }
+    for (int i = 0; i < 255; i++) {
+        rgb.RGB_LED(0, i, 255 - i, 10);
+    }
+    for (int i = 0; i < 255; i++) {
+        rgb.RGB_LED(255 - i, 0, i, 10);
+    }
 
-  rgb.Fade(1000);
+    int num = 3;
+    while (num--) {
+        rgb.SetFadeTime(delayTime, delayTime);
+        rgb.on(delayTime);
+        rgb.off(delayTime);
+    }
+
+    num = 3;
+    while (num--) {
+        rgb.ResetFadeTime();
+        rgb.on(delayTime);
+        rgb.off(delayTime);
+    }
+
+    rgb.Fade(1000);
 }
