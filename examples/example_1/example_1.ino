@@ -17,25 +17,25 @@ void setup() { rgb.init(); }
 const int delayTime = 250;
 void loop() {
     for (int i = 0; i < 255; i++) {
-        rgb.RGB_LED(i, 255 - i, 0, 10);
+        rgb.RGB_LED(      0,       i, 255 - i, 10);
     }
     for (int i = 0; i < 255; i++) {
-        rgb.RGB_LED(0, i, 255 - i, 10);
+        rgb.RGB_LED(      i, 255 - i,       0, 10);
     }
     for (int i = 0; i < 255; i++) {
-        rgb.RGB_LED(255 - i, 0, i, 10);
+        rgb.RGB_LED(255 - i,       0,       i, 10);
     }
 
     int num = 3;
     while (num--) {
-        rgb.SetFadeTime(delayTime, delayTime);
+        rgb.ResetFadeTime();
         rgb.on(delayTime);
         rgb.off(delayTime);
     }
 
     num = 3;
     while (num--) {
-        rgb.ResetFadeTime();
+        rgb.SetFadeTime(delayTime, delayTime);
         rgb.on(delayTime);
         rgb.off(delayTime);
     }
